@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using UnityEngine;  
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GUIManager : MonoBehaviour {
 
@@ -198,6 +199,7 @@ public class GUIManager : MonoBehaviour {
                 Text2Screen.SetActive(false);;
                 canSkip = false;
                 skipTimer = 1f;
+                StarttheGame();
                 }
             }
 
@@ -437,6 +439,9 @@ public class GUIManager : MonoBehaviour {
     public void StarttheGame()
         {
         OpeningScreen1.SetActive(false);
+        TitleScreen.SetActive(false);
+        CreditsScreen.SetActive(false);
+        SceneManager.LoadScene("Assets/Scenes/TestingLevel.unity");
         }
     public void YouWin()
         {
