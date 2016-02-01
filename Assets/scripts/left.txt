@@ -1,9 +1,0 @@
-animation controllin for player character 
-controlled by animation controller and the velocity stat
-
-animation fo rht emain character
-culdrednnfdfdn and the win state with it
-sucking in slimes (rorating peice)
-
-actually making the map and placing the slimes
-
