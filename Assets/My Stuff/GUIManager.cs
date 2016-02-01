@@ -49,6 +49,8 @@ public class GUIManager : MonoBehaviour {
     public Button CreditsButton;
     public bool canSkip;
     public float skipTimer;
+    public Scene GUIScene;
+    public Scene BensScene;
 
 	// Use this for initialization
 	void Start () {
@@ -85,6 +87,8 @@ public class GUIManager : MonoBehaviour {
         Text4Screen.SetActive(false);
         Text5Screen.SetActive(false);
         Text6Screen.SetActive(false);
+        GUIScene = SceneManager.GetActiveScene();
+  
 	}
 	
 	// Update is called once per frame //15-16-1
@@ -441,13 +445,10 @@ public class GUIManager : MonoBehaviour {
         OpeningScreen1.SetActive(false);
         TitleScreen.SetActive(false);
         CreditsScreen.SetActive(false);
-        SceneManager.LoadScene("Assets/Scenes/TestingLevel.unity");
-        }
-    public void YouWin()
-        {
-        //Pause Game Shit goes here
-        YouWinScreen.SetActive(true);
-        //whatever else needs to go off here!
+	SceneManager.LoadScene("Main Scene");
+	//SceneManager.LoadScene("EmptyGameplayTesting");
+     
+        //SceneManager.SetActiveScene(GameplayScene);
         }
     public void ReturntoStartMenu()
         {
@@ -457,3 +458,11 @@ public class GUIManager : MonoBehaviour {
         CreditsScreen.SetActive(false);
         }
     }
+
+
+
+
+
+
+
+//still to do: change text in Dislog boxes, get switching between scenes working, youwin 
